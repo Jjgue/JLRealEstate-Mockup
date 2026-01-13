@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REAL ESTATE</title>
+    <style>
+        @font-face {
+            font-family: 'Moralana';
+            src: url('Moralana.otf');
+        }
+
+        body {
+            background-image: url('Photos/h4.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 50px 0;
+            min-height: 100vh;
+        }
+
+        .overlay-container {
+            z-index: 1;
+            position: relative;
+            width: 95%;
+            max-width: 1200px;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            padding: 40px;
+            box-sizing: border-box;
+            border: 1px solid rgba(250, 235, 215, 0.1);
+        }
+
+        .form-section {
+            flex: 1.5;
+            color: antiquewhite;
+            padding-right: 30px;
+        }
+
+        .right-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-left: 1px solid rgba(250, 235, 215, 0.2);
+            padding-left: 30px;
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+        }
+
+        .main-title {
+            font-family: 'Moralana', serif;
+            color: antiquewhite;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .floor-plan {
+            max-width: 100%;
+            max-height: 50vh;
+            object-fit: cover;
+            border: 1px solid rgba(250, 235, 215, 0.3);
+            filter: grayscale(20%);
+            margin-bottom: 20px;
+        }
+
+        fieldset {
+            border: 1px solid rgba(250, 235, 215, 0.3);
+            margin-bottom: 25px;
+            padding: 20px;
+        }
+
+        legend {
+            color: antiquewhite;
+            padding: 0 10px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+        }
+
+        .input-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-size: 0.75rem;
+            margin-bottom: 5px;
+            color: rgba(250, 235, 215, 0.8);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        input[type="search"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(250, 235, 215, 0.2);
+            color: white;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        select option {
+            color: black;
+            background-color: white;
+        }
+
+        textarea {
+            height: 70px;
+            resize: vertical;
+        }
+
+        .check-radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.8rem;
+            align-items: center;
+            margin-top: 5px;
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        button {
+            flex: 1;
+            background: transparent;
+            color: antiquewhite;
+            border: 1px solid antiquewhite;
+            padding: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        button:hover {
+            background: antiquewhite;
+            color: black;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .nav-links a {
+            color: antiquewhite;
+            text-decoration: none;
+            font-size: 0.75rem;
+            border-bottom: 1px solid transparent;
+            transition: 0.3s;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="overlay-container">
+        <section class="form-section">
+            <header>
+                <h2 style="font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px; letter-spacing: 5px;">Registration Form</h2>
+            </header>
+
+            <form>
+                <fieldset>
+                    <legend>Contact Details</legend>
+                    <div class="input-row">
+                        <div>
+                            <label>First Name</label>
+                            <input type="text" placeholder="Jane">
+                        </div>
+                        <div>
+                            <label>Last Name</label>
+                            <input type="text" placeholder="Doe">
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div>
+                            <label>Middle Name</label>
+                            <input type="text" placeholder="M.I">
+                        </div>
+                        <div>
+                            <label>Suffix</label>
+                            <input type="text" placeholder="Jr.">
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div>
+                            <label>Official Email</label>
+                            <input type="email" placeholder="user@domain.com">
+                        </div>
+                        <div>
+                            <label>Mobile Number</label>
+                            <input type="number" placeholder="+63">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Location & Search</legend>
+                    <div class="input-row">
+                        <div>
+                            <label>Date of Visit</label>
+                            <input type="date">
+                        </div>
+                        <div>
+                            <label>Search Area</label>
+                            <input type="search" placeholder="Enter District...">
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div>
+                            <label>Target City</label>
+                            <input type="text" list="citylist" placeholder="Select or Type">
+                            <datalist id="citylist">
+                                <option value="Makati City">
+                                <option value="BGC / Taguig">
+                                <option value="Quezon City">
+                                <option value="Pasay City">
+                                <option value="Davao City">
+                            </datalist>
+                        </div>
+                        <div>
+                            <label>Preferred Street</label>
+                            <input type="text" placeholder="Elmwood St.">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Property Specs</legend>
+                    <div class="input-row">
+                        <div>
+                            <label>Building Name</label>
+                            <input type="text" placeholder="Alpha">
+                        </div>
+                        <div>
+                            <label>Unit Number</label>
+                            <input type="text" placeholder="Input Unit">
+                        </div>
+                    </div>
+
+                    <label>Structural Type:</label>
+                    <div class="check-radio-group">
+                        <input type="radio" name="r1" value="1"> <span>Modern Condo</span>
+                        <input type="radio" name="r1" value="2"> <span>Classic House</span>
+                        <input type="radio" name="r1" value="3"> <span>Studio Loft</span>
+                    </div>
+                    <br>
+                    <label>Ownership Status:</label>
+                    <div class="check-radio-group">
+                        <input type="radio" name="r2" value="4"> <span>Preselling</span>
+                        <input type="radio" name="r2" value="5"> <span>Ready for Occupancy</span>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Essential Amenities</legend>
+                    <label>Internal Features:</label>
+                    <div class="check-radio-group">
+                        <input type="checkbox"> <span>Home Theatre</span>
+                        <input type="checkbox"> <span>Mini Bar</span>
+                        <input type="checkbox"> <span>Walk-in Closet</span>
+                    </div>
+                    <br>
+                    <label>External Features:</label>
+                    <div class="check-radio-group">
+                        <input type="checkbox"> <span>Private Pool</span>
+                        <input type="checkbox"> <span>Sky Garden</span>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Professional Selection</legend>
+                    <div class="input-row">
+                        <div>
+                            <label>Assign Sales Agent</label>
+                            <select>
+                                <option>Choose Agent</option>
+                                <option>John Pork</option>
+                                <option>Michael Scott</option>
+                                <option>Harvey Specter</option>
+                                <option>Diana Prince</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Preferred Bank</label>
+                            <select>
+                                <option>BDO Unibank</option>
+                                <option>BPI</option>
+                                <option>Metrobank</option>
+                                <option>Security Bank</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div>
+                            <label>Floor Preference</label>
+                            <select>
+                                <option>Low Level</option>
+                                <option>Mid Level</option>
+                                <option>High Level</option>
+                                <option>Penthouse</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Previous Address</label>
+                            <input type="text" placeholder="B/L/Street/Village/City">
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div>
+                            <label>Emergency Contact</label>
+                            <input type="text" placeholder="+63">
+                        </div>
+                        <div>
+                            <label>Source of Funds</label>
+                            <input type="text" placeholder="0">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Formal Documentation</legend>
+                    <label>Reason for Purchase</label>
+                    <textarea placeholder="Write here..."></textarea>
+                    <label>Current Home Description</label>
+                    <textarea placeholder="Write here..."></textarea>
+                    <label>Work Background</label>
+                    <textarea placeholder="Write here..."></textarea>
+                    <label>Additional Instructions</label>
+                    <textarea placeholder="Write here..."></textarea>
+                </fieldset>
+
+                <div class="btn-container">
+                    <button type="reset">Clear Entries</button>
+                    <button type="submit">Send Application</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="right-column">
+            <h1 class="main-title">REAL LIVING REAL ESTATE</h1>
+            <img src="Photos/aemee.jpg" alt="Floor Plan" class="floor-plan">
+            <nav class="nav-buttons">
+                <a href="Legaspi.ex2.html"><button>About Us</button></a>
+                <a href="Project.html"><button>Project</button></a>
+                <a href="Form.html"><button>Form</button></a>
+            </nav>
+        </section>
+    </main>
+
+</body>
+
+</html>

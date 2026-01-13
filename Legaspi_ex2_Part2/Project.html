@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECTS</title>
+    <style>
+        @font-face {
+            font-family: 'Moralana';
+            src: url('Moralana.otf');
+        }
+
+        body {
+            background-image: url('Photos/h4.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .overlay-container {
+            position: relative;
+            width: 90vw;
+            height: 85vh;
+            background-color: rgba(0, 0, 0, 0.85);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px;
+            box-sizing: border-box;
+            border: 1px solid rgba(250, 235, 215, 0.1);
+        }
+
+        .text-content {
+            flex: 1;
+            color: antiquewhite;
+            padding-right: 50px;
+        }
+
+        .text-content h2 {
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        .text-content p {
+            text-align: justify;
+            line-height: 1.7;
+            font-size: 0.9rem;
+            color: rgba(250, 235, 215, 0.8);
+        }
+
+        .right-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .project-display {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .main-title {
+            font-family: 'Moralana', serif;
+            color: antiquewhite;
+            margin: 0 0 0px 0;
+            letter-spacing: 4px;
+            font-weight: 300;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 1.6rem;
+        }
+
+        .right-column img {
+            width: 400px;
+            height: auto;
+            border: 1px solid rgba(250, 235, 215, 0.3);
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .nav-buttons button {
+            background: transparent;
+            color: antiquewhite;
+            border: 1px solid antiquewhite;
+            padding: 10px 20px;
+            min-width: 110px;
+            font-size: 11px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .nav-buttons button:hover {
+            background-color: antiquewhite;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="overlay-container">
+        <section class="text-content">
+            <h2>Floor Plan</h2>
+            <p>
+                Explore the thoughtful layout of our premier estate, where every square meter is designed to maximize
+                flow and functionality. Our open-concept floor plan seamlessly connects the social and private spheres
+                of the home, emphasizing a balanced 'Real Living' experience.
+
+                <br><br> From the expansive glass of the Master Suite to the earthy textures of the Dining Hall, this
+                blueprint
+                represents a masterclass in modern residential design. Each room is a deliberate destination, crafted
+                with premium finishes and an eye for detail."
+            </p>
+            <p style="font-style: italic; font-size: 0.8rem; color: #d2c898;">
+                Click on the rooms to see their layout.
+            </p>
+        </section>
+
+        <section class="right-column">
+            <div class="project-display">
+                <h1 class="main-title">REAL LIVING REAL ESTATE</h1>
+                <img src="Photos/h4.png" usemap="#image-map" alt="Project Floor Plan">
+
+                <map name="image-map">
+                    <area target="" alt="Dining" title="Dining" href="Floor_Plan/dining.html" coords="7,7,95,191"
+                        shape="rect">
+                    <area target="" alt="Living" title="Living" href="Floor_Plan/living.html" coords="97,7,200,190"
+                        shape="rect">
+                    <area target="" alt="MB" title="MB" href="Floor_Plan/master.html"
+                        coords="203,4,400,4,400,150,220,150,220,165,260,165,260,150,203,150" shape="poly">
+                </map>
+            </div>
+
+            <nav class="nav-buttons">
+                <a href="Legaspi.ex2.html"><button>About Us</button></a>
+                <a href="Project.html"><button>Project</button></a>
+                <a href="Form.html"><button>Form</button></a>
+            </nav>
+        </section>
+    </main>
+
+</body>
+
+</html>
